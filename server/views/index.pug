@@ -1,0 +1,7 @@
+html
+	head
+		title #{title || 'Express'}
+		=htmlWebpackPlugin.files.webpackManifest
+	body
+		h1 #{title || 'Express'}
+		p Welcome to #{title || 'Express'}

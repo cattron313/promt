@@ -1,0 +1,2 @@
+exports.ids=[1,2],exports.modules=[,function(o,n,s){"use strict";!function(o){o.onload=function(){console.log("WE IN THIS THANG BREH!!!"),s(0)}}(window)}];
+//# sourceMappingURL=bundle.app.b919efb4e2f561757379.js.map
