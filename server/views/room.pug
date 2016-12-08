@@ -20,7 +20,7 @@ block content
 			div#ask-socket-notify
 			div#ask-container
 				each ask in asks
-					+askContent(ask.firstName, ask.headline, ask.profilePic, ask.description)
+					+askContent(ask.author.name, ask.author.linkedin_headline, ask.author.linkedin_profile_pic_url, ask.content)
 
 
 
