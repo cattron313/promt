@@ -18,7 +18,7 @@ module.exports = {
       max: 10
     },
     seeds: {
-      directory: './db/seeds/dev'
+      directory: './seeds/dev'
     }
   },
 
