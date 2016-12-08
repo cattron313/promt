@@ -23,8 +23,7 @@ module.exports = env => {
 
   return webpackValidator({
       entry: {
-        app: './client/javascripts/bootstrap.js',
-        vendor: ['./client/stylesheets/style.css']
+        app: './client/javascripts/bootstrap.js'
       },
       target: 'node',
       output: {

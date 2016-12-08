@@ -4,11 +4,13 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+require('dotenv').config();
 
-var utils = require('./server/utils');
+var passport = require('passport');
 
 var index = require('./server/routes/index');
 var users = require('./server/routes/users');
+var auth = require('./server/routes/auth');
 
 var app = express();
 
@@ -22,11 +24,13 @@ app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
+app.use(passport.initialize());
 
 require('./server/middleware/app-level-middleware')(app);
 
 app.use('/', index);
 app.use('/users', users);
+app.use('/auth', auth);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
