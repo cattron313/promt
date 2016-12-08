@@ -1,0 +1,13 @@
+html
+	head
+		block title
+		if prod
+			link(rel='stylesheet' href='//cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css')
+			link(rel='stylesheet' href='//cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css.map')
+			=htmlWebpackPlugin.files.webpackManifest
+		else
+			link(rel='stylesheet' href='//cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.css')
+			link(rel='stylesheet' href='/build/styles.vendor.css')
+			link(rel='stylesheet' href='/build/styles.app.css')
+	body
+		block content

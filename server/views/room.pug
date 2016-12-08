@@ -1,0 +1,26 @@
+extends layout.pug
+
+mixin askContent(name, headline, photoSrc, description)
+	div.ask
+		img(src = photoSrc)
+		div.ask-text
+			h3=name
+			h4=headline
+			p=description
+
+block title
+	title Promt
+
+block content
+	div#main
+		div#banner
+			h1 Code2040 Holiday Mixer
+			h2 Where the ice gets thinner
+		div#content
+			div#ask-socket-notify
+			div#ask-container
+				each ask in asks
+					+askContent(ask.firstName, ask.headline, ask.profilePic, ask.description)
+
+
+
